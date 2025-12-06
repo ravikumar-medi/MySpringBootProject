@@ -1,4 +1,4 @@
-package com.java.dto;
+package com.myproject.dto;
 
 public class UserCreateRequest {
     private String username;

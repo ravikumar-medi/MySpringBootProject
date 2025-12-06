@@ -1,4 +1,4 @@
-package com.java.utils;
+package com.myproject.utils;
 
 import java.sql.Time;
 import java.sql.Timestamp;
@@ -12,15 +12,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public final class DateUtils {
 	private DateUtils() {
 
 	}
-
-	private static final Log LOG = LogFactory.getLog(DateUtils.class);
-
 	/**
 	 * static final members for various date formats useful in the application
 	 */
@@ -61,7 +59,7 @@ public final class DateUtils {
 			}
 		} catch (ParseException e) {
 			// e.printStackTrace();
-			LOG.error("Date Parsing Exception : " + e.getMessage());
+			log.error("Date Parsing Exception : " + e.getMessage());
 		}
 
 		return date;
@@ -97,10 +95,10 @@ public final class DateUtils {
 			}
 			return null;
 		} catch (ParseException e) {
-			LOG.error(e.getMessage(), e);
+			log.error(e.getMessage(), e);
 			return null;
 		} catch (Exception e) {
-			LOG.error(e.getMessage(), e);
+			log.error(e.getMessage(), e);
 			return null;
 		}
 	}
@@ -126,7 +124,7 @@ public final class DateUtils {
 			}
 			return null;
 		} catch (ParseException e) {
-			LOG.error(e.getMessage());
+			log.error(e.getMessage());
 			return null;
 		}
 	}
@@ -217,7 +215,7 @@ public final class DateUtils {
 																// column
 			} // end if
 		} catch (ParseException e) {
-			LOG.error(e.getMessage());
+			log.error(e.getMessage());
 			return null;
 		}
 	} // end
@@ -231,7 +229,7 @@ public final class DateUtils {
 		try {
 			return simpleDateFormat.parse(getCurrentDateAsString(format));
 		} catch (ParseException e) {
-			LOG.error(e.getStackTrace());
+			log.info(e.getMessage(),e);
 		}
 		return null;
 	}
@@ -353,7 +351,7 @@ public final class DateUtils {
 																					// that
 																					// month
 			maxDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
-			LOG.info("Max Day: " + maxDay);
+			log.info("Max Day: " + maxDay);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return 0;
@@ -533,7 +531,7 @@ public final class DateUtils {
 			}
 			return null;
 		} catch (ParseException e) {
-			LOG.info(e.getCause(), e);
+			log.info(e.getMessage(), e);
 			return null;
 		}
 	}
@@ -550,7 +548,7 @@ public final class DateUtils {
 			}
 			return null;
 		} catch (ParseException e) {
-			LOG.info(e.getCause(), e);
+			log.info(e.getMessage(), e);
 			return null;
 		}
 	}
@@ -567,7 +565,7 @@ public final class DateUtils {
 			}
 			return null;
 		} catch (ParseException e) {
-			LOG.info(e.getCause(), e);
+			log.info(e.getMessage(), e);
 			return null;
 		}
 	}
@@ -697,7 +695,7 @@ public final class DateUtils {
 			Date utilDate = sdf.parse(timestamp + "");
 			return DateUtils.formatDate(utilDate, format);
 		} catch (Exception e) {
-			LOG.error(e.getMessage(), e);
+			log.error(e.getMessage(), e);
 		}
 		return null;
 	}
@@ -712,7 +710,7 @@ public final class DateUtils {
 			SimpleDateFormat sdf = new SimpleDateFormat("h:mma");
 			return sdf.format(timestamp);
 		} catch (Exception e) {
-			LOG.error(e.getMessage(), e);
+			log.error(e.getMessage(), e);
 		}
 		return null;
 	}
@@ -744,7 +742,7 @@ public final class DateUtils {
 			calendar.set(Calendar.MONTH, calendar.get(Calendar.MONTH));
 			return calendar.get(Calendar.DAY_OF_MONTH);
 		} catch (Exception e) {
-			LOG.info(e.getCause(), e);
+			log.info(e.getMessage(), e);
 			return 0;
 		}
 	}
@@ -849,10 +847,10 @@ public final class DateUtils {
 			}
 			return null;
 		} catch (ParseException e) {
-			LOG.error(e.getMessage(), e);
+			log.error(e.getMessage(), e);
 			return null;
 		} catch (Exception e) {
-			LOG.error(e.getMessage(), e);
+			log.error(e.getMessage(), e);
 			return null;
 		}
 	}
@@ -869,10 +867,10 @@ public final class DateUtils {
 			}
 			return null;
 		} catch (ParseException e) {
-			LOG.error(e.getMessage(), e);
+			log.error(e.getMessage(), e);
 			return null;
 		} catch (Exception e) {
-			LOG.error(e.getMessage(), e);
+			log.error(e.getMessage(), e);
 			return null;
 		}
 	}
@@ -919,7 +917,7 @@ public final class DateUtils {
 			Timestamp ts = new java.sql.Timestamp(parsedDate.getTime());
 			return ts;
 		} catch (ParseException e) {
-			LOG.info(e.getCause(), e);
+			log.error(e.getMessage(), e);
 			return null;
 		}
 	}
@@ -970,9 +968,9 @@ public final class DateUtils {
 			diffHours = diff / (60 * 60 * 1000);
 			// System.out.println("Time in seconds: " + diffSeconds + " seconds.");
 			// System.out.println("Time in minutes: " + diffMinutes + " minutes.");
-			LOG.info("Time in hours: " + diffHours + " hours.");
+			log.info("Time in hours: " + diffHours + " hours.");
 		} catch (Exception e) {
-			LOG.info("" + e.getStackTrace());
+			log.info("" + e.getStackTrace());
 		}
 		return diffHours;
 	}
@@ -984,7 +982,7 @@ public final class DateUtils {
 			DateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
 			return formatter.format(dd);
 		} catch (Exception e) {
-			LOG.info("" + e.getStackTrace(), e);
+			log.info("" + e.getStackTrace(), e);
 			return "";
 		}
 	}
@@ -1007,7 +1005,7 @@ public final class DateUtils {
 			}
 		} catch (ParseException e) {
 			// e.printStackTrace();
-			LOG.error("Date Parsing Exception : " + e.getMessage());
+			log.error("Date Parsing Exception : " + e.getMessage());
 		}
 
 		return date;
@@ -1037,7 +1035,7 @@ public final class DateUtils {
 	            return ddate.toUpperCase();
 	        }
 	        catch (ParseException e) {
-	            LOG.info(e.getCause(), e);
+	            log.info(e.getMessage(), e);
 	            return null;
 	        }
 	    }
