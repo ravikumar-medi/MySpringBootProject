@@ -14,7 +14,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -35,7 +34,7 @@ public class SecurityConfig {
         log.info("\n enter to securityFilterChain");
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/web-api/**","/api/auth/**", "/","/welcome","/users/**")
+                        .requestMatchers("/api/auth/**", "/","/welcome","/users/**")
                         .permitAll()
                         .anyRequest().authenticated()
                 )
@@ -51,7 +50,8 @@ public class SecurityConfig {
         return config.getAuthenticationManager();
     }
 
-    @Bean
+    @SuppressWarnings("deprecation")
+	@Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
         authenticationProvider.setUserDetailsService(myUserDetailsService);

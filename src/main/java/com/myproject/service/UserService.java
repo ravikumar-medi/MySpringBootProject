@@ -1,6 +1,5 @@
 package com.myproject.service;
 
-import ch.qos.logback.core.util.StringUtil;
 import com.myproject.dto.ChangePasswordRequestDTO;
 import com.myproject.dto.ChangePasswordResponseDTO;
 import com.myproject.dto.LoginRequestDTO;
@@ -14,7 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
@@ -65,21 +63,18 @@ public class UserService {
     }
 
     public void executeQuery(HashMap<String,String> requestMap) {
-        String query=requestMap.get("query");
-        log.info("query -->"+query);
-        requestMap.entrySet().forEach(entry->
-                log.info(entry.getKey()+""+entry.getValue())
-        );
-        MapSqlParameterSource namedParameters=new MapSqlParameterSource()
-                                             .addValue("STATUS","Y");
+        
+        MapSqlParameterSource namedParameters=new MapSqlParameterSource().addValue("STATUS","Y");
         requestMap.entrySet().forEach(entry-> {
                     if(StringUtils.isNotBlank(entry.getValue())){
+                        log.info("key-->"+entry.getKey()+"query-->"+entry.getValue());
                        try{
 //                           namedParameterJdbcTemplate.queryForList(entry.getValue(),namedParameters);  //for select
                            namedParameterJdbcTemplate.update(entry.getValue(),namedParameters);  //for insert/update/delete
                        }
                        catch (Exception e){
                            log.info("Error Occured  ::::"+entry.getKey());
+                           e.printStackTrace();
                        }
                     }
         }

@@ -2,10 +2,7 @@ package com.myproject.utils;
 
 import java.math.BigDecimal;
 
-/**
- * @author Kiran S
- *
- */
+
 public class NullSafeUtils {
 
 	public static String safeString(String value) {

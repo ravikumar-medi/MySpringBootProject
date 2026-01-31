@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
+@SuppressWarnings("serial")
 public class UserPrinciple implements UserDetails {
 
     private Users user;

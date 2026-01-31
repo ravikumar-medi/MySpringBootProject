@@ -1,6 +1,6 @@
 package com.myproject.service;
 
-import com.myproject.controller.WebController;
+import com.myproject.controller.HomeController;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
@@ -8,15 +8,10 @@ import java.time.LocalDateTime;
 @Component
 public class CodeJobScheduler {
 
-//    @Autowired
-//    private CodeSyncService codeSyncService;
-//
-//    @Autowired
-//    private CentralDbPushService centralDbPushService;
+
+	private final HomeController webController;
 	
-	private final WebController webController;
-	
-	public CodeJobScheduler(WebController webController) {
+	public CodeJobScheduler(HomeController webController) {
 		this.webController=webController;
 		
 	}

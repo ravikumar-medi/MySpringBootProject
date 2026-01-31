@@ -10,7 +10,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.security.Key;
-import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -40,7 +39,8 @@ public class JwtService {
                 .parseClaimsJws(token).getBody();
     }
 
-    public String generateToken(Users user) {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public String generateToken(Users user) {
         Map<String, Object> claims = new HashMap();
         claims.put("role", user.getRole());
         return createToken(claims, user.getUsername());
