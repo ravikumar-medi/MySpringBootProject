@@ -21,7 +21,7 @@ public class WebController {
     public ResponseEntity<Map<String, Object>> welcome() {
         log.info("Welcome to ravikumar medi java spring boot project");
 
-        
+
         Map<String, Object> response = new HashMap<>();
         response.put("statusCode", 200);
         response.put("status", "SUCCESS");
