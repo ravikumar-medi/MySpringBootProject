@@ -1,0 +1,266 @@
+2026-02-02T17:07:24.107+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : Starting MyApp using Java 17.0.12 with PID 14468 (D:\CBP\Projects\MySpringBootProject\target\classes started by chall in D:\CBP\Projects\MySpringBootProject)
+2026-02-02T17:07:24.113+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : The following 1 profile is active: "dev"
+2026-02-02T17:07:24.283+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-02T17:07:24.283+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-02T17:07:26.162+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T17:07:26.294+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
+2026-02-02T17:07:28.096+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-02T17:07:28.128+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T17:07:28.130+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-02T17:07:28.279+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-02T17:07:28.281+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3994 ms
+2026-02-02T17:07:28.670+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-02T17:07:28.812+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-02-02T17:07:28.924+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-02T17:07:29.865+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T17:07:29.946+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T17:07:32.943+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72159166
+2026-02-02T17:07:32.943+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T17:07:33.473+05:30  WARN 14468 --- [MySpringBootProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-02T17:07:33.521+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T17:07:35.141+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T17:07:36.055+05:30 DEBUG 14468 --- [MySpringBootProject] [restartedMain] org.hibernate.SQL                        : alter table users modify column status enum ('ACTIVE','BLOCKED','INACTIVE') not null
+2026-02-02T17:07:36.482+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T17:07:38.544+05:30  WARN 14468 --- [MySpringBootProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T17:07:39.306+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-02T17:07:39.308+05:30  WARN 14468 --- [MySpringBootProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-02T17:07:39.404+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.config.SecurityConfig      : SecurityFilterChain Invoked.....
+2026-02-02T17:07:39.667+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-02-02T17:07:40.143+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-02T17:07:40.226+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-02T17:07:40.261+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : Started MyApp in 17.302 seconds (process running for 18.295)
+2026-02-02T17:08:03.615+05:30  INFO 14468 --- [MySpringBootProject] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-02T17:08:03.616+05:30  INFO 14468 --- [MySpringBootProject] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-02T17:08:03.618+05:30  INFO 14468 --- [MySpringBootProject] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-02T17:08:03.659+05:30  INFO 14468 --- [MySpringBootProject] [http-nio-8080-exec-1] c.m.config.JwtAuthenticationFilter       : authHeader: null
+2026-02-02T17:08:03.661+05:30  INFO 14468 --- [MySpringBootProject] [http-nio-8080-exec-1] c.m.config.JwtAuthenticationFilter       : Invalid authHeader!
+2026-02-02T17:08:03.796+05:30  INFO 14468 --- [MySpringBootProject] [http-nio-8080-exec-2] c.m.config.JwtAuthenticationFilter       : authHeader: null
+2026-02-02T17:08:03.797+05:30  INFO 14468 --- [MySpringBootProject] [http-nio-8080-exec-2] c.m.config.JwtAuthenticationFilter       : Invalid authHeader!
+2026-02-02T17:10:06.542+05:30  INFO 14468 --- [MySpringBootProject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 32 class path changes (0 additions, 29 deletions, 3 modifications)
+2026-02-02T17:10:06.554+05:30  INFO 14468 --- [MySpringBootProject] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-02T17:10:06.780+05:30  INFO 14468 --- [MySpringBootProject] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-02T17:10:06.788+05:30  INFO 14468 --- [MySpringBootProject] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T17:10:06.799+05:30  INFO 14468 --- [MySpringBootProject] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-02T17:10:06.860+05:30  INFO 14468 --- [MySpringBootProject] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-02T17:10:07.301+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : Starting MyApp using Java 17.0.12 with PID 14468 (D:\CBP\Projects\MySpringBootProject\target\classes started by chall in D:\CBP\Projects\MySpringBootProject)
+2026-02-02T17:10:07.301+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : The following 1 profile is active: "dev"
+2026-02-02T17:10:08.544+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T17:10:08.552+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-02-02T17:10:09.969+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-02T17:10:09.975+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T17:10:09.977+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-02T17:10:10.132+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-02T17:10:10.132+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2821 ms
+2026-02-02T17:10:10.215+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-02T17:10:10.229+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-02T17:10:10.274+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T17:10:10.278+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-02-02T17:10:11.127+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@cd6bebf
+2026-02-02T17:10:11.127+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-02-02T17:10:11.189+05:30  WARN 14468 --- [MySpringBootProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-02T17:10:11.190+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T17:10:11.232+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T17:10:11.232+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T17:10:11.316+05:30  WARN 14468 --- [MySpringBootProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T17:10:11.381+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-02-02T17:10:11.986+05:30  WARN 14468 --- [MySpringBootProject] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cc59cf90-d706-4bfa-bf95-94eb9cbbab2b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-02-02T17:10:11.992+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-02-02T17:10:12.130+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-02T17:10:12.167+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-02T17:10:12.193+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : Started MyApp in 5.134 seconds (process running for 170.226)
+2026-02-02T17:10:12.244+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'spring.security.user.password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'spring.security.user.name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+      - @ConditionalOnBean (types: org.springframework.security.config.ObjectPostProcessor; SearchStrategy: all) found beans 'objectPostProcessor', 'webAuthorizationManagerPostProcessor', 'filterChainDecoratorPostProcessor', 'authenticationManagerPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,?; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2026-02-02T17:10:15.506+05:30  INFO 14468 --- [MySpringBootProject] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 29 class path changes (29 additions, 0 deletions, 0 modifications)
+2026-02-02T17:10:15.508+05:30  INFO 14468 --- [MySpringBootProject] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-02T17:10:15.706+05:30  INFO 14468 --- [MySpringBootProject] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-02T17:10:15.710+05:30  INFO 14468 --- [MySpringBootProject] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T17:10:15.712+05:30  INFO 14468 --- [MySpringBootProject] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-02-02T17:10:15.753+05:30  INFO 14468 --- [MySpringBootProject] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-02-02T17:10:15.915+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : Starting MyApp using Java 17.0.12 with PID 14468 (D:\CBP\Projects\MySpringBootProject\target\classes started by chall in D:\CBP\Projects\MySpringBootProject)
+2026-02-02T17:10:15.915+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : The following 1 profile is active: "dev"
+2026-02-02T17:10:16.499+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T17:10:16.558+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2026-02-02T17:10:16.904+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-02T17:10:16.904+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T17:10:16.906+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-02T17:10:16.979+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-02T17:10:17.001+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1078 ms
+2026-02-02T17:10:17.119+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-02T17:10:17.143+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-02T17:10:17.179+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T17:10:17.181+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-02-02T17:10:17.216+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@318dacba
+2026-02-02T17:10:17.216+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-02-02T17:10:17.218+05:30  WARN 14468 --- [MySpringBootProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-02T17:10:17.220+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T17:10:17.327+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T17:10:17.520+05:30 DEBUG 14468 --- [MySpringBootProject] [restartedMain] org.hibernate.SQL                        : alter table users modify column status enum ('ACTIVE','BLOCKED','INACTIVE') not null
+2026-02-02T17:10:17.809+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T17:10:18.016+05:30  WARN 14468 --- [MySpringBootProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T17:10:18.862+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-02T17:10:18.862+05:30  WARN 14468 --- [MySpringBootProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-02T17:10:18.866+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.config.SecurityConfig      : SecurityFilterChain Invoked.....
+2026-02-02T17:10:18.940+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-02-02T17:10:19.016+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-02T17:10:19.300+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-02T17:10:19.322+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : Started MyApp in 3.46 seconds (process running for 177.356)
+2026-02-02T17:10:19.333+05:30  INFO 14468 --- [MySpringBootProject] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,?; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' myUserDetailsService and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+         - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'spring.security.user.password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'spring.security.user.name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2026-02-02T17:10:25.872+05:30  INFO 14468 --- [MySpringBootProject] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-02T17:10:26.069+05:30  INFO 14468 --- [MySpringBootProject] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-02T17:10:26.078+05:30  INFO 14468 --- [MySpringBootProject] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T17:10:26.082+05:30  INFO 14468 --- [MySpringBootProject] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-02-02T17:10:26.090+05:30  INFO 14468 --- [MySpringBootProject] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-02-02T17:10:57.147+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : Starting MyApp using Java 17.0.12 with PID 23504 (D:\CBP\Projects\MySpringBootProject\target\classes started by chall in D:\CBP\Projects\MySpringBootProject)
+2026-02-02T17:10:57.152+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : The following 1 profile is active: "dev"
+2026-02-02T17:10:57.326+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-02T17:10:57.326+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-02T17:10:59.744+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-02T17:10:59.900+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 1 JPA repository interface.
+2026-02-02T17:11:01.523+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-02T17:11:01.553+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-02T17:11:01.556+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-02-02T17:11:01.683+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-02T17:11:01.685+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4355 ms
+2026-02-02T17:11:02.053+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-02T17:11:02.181+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-02-02T17:11:02.264+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-02T17:11:03.096+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-02T17:11:03.165+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-02T17:11:03.925+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3845eb30
+2026-02-02T17:11:03.929+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-02T17:11:04.057+05:30  WARN 23504 --- [MySpringBootProject] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-02T17:11:04.130+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-02T17:11:06.369+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02T17:11:06.488+05:30 DEBUG 23504 --- [MySpringBootProject] [restartedMain] org.hibernate.SQL                        : alter table users modify column status enum ('ACTIVE','BLOCKED','INACTIVE') not null
+2026-02-02T17:11:06.528+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-02T17:11:07.705+05:30  WARN 23504 --- [MySpringBootProject] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-02T17:11:08.122+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-02T17:11:08.124+05:30  WARN 23504 --- [MySpringBootProject] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-02T17:11:08.321+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] com.myproject.config.SecurityConfig      : SecurityFilterChain Invoked.....
+2026-02-02T17:11:08.563+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-02-02T17:11:08.868+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-02T17:11:08.937+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-02T17:11:08.963+05:30  INFO 23504 --- [MySpringBootProject] [restartedMain] com.myproject.MyApp                      : Started MyApp in 13.345 seconds (process running for 14.46)
