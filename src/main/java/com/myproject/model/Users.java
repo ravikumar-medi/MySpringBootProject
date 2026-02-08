@@ -28,8 +28,8 @@ public class Users {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 10)
     private Status status = Status.ACTIVE;
-
-    private int failedAttempts = 0;
+    
+    private Integer failedAttempts = 0;
 
     private LocalDateTime lastLogin;
 

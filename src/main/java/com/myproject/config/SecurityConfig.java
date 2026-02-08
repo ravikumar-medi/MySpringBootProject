@@ -34,9 +34,14 @@ public class SecurityConfig {
         log.info("SecurityFilterChain Invoked.....");
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**", "/","/welcome","/users/**")
-                        .permitAll()
-                        .anyRequest().authenticated()
+                		 .requestMatchers(
+                	                "/cbts/api/**",   // CBTS
+                	                "/api/auth/**",
+                	                "/",
+                	                "/welcome",
+                	                "/users/**"
+                	            ).permitAll()
+                	            .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider())
