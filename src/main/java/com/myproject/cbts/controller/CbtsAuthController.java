@@ -26,9 +26,10 @@ public class CbtsAuthController {
         return authService.Cbtslogin(request);
     }
     
-    @PostMapping("/users")
+    @PostMapping("/create-user")
     public CbtsCreateUserResponse createUser(
             @RequestBody CbtsCreateUserRequest request) {
+    	log.info("Entering in to the /create-user..... ");
         return userService.createUser(request);
     }
 }

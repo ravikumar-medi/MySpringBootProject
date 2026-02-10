@@ -1,5 +1,6 @@
 package com.myproject.service;
 
+import com.myproject.cbts.models.CbtsUser;
 import com.myproject.model.Users;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -45,7 +46,14 @@ public class JwtService {
         claims.put("role", user.getRole());
         return createToken(claims, user.getUsername());
     }
-
+    //This for only CBTS Token
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    public String generateTokenForCbtsUser(CbtsUser user) {
+        Map<String, Object> claims = new HashMap();
+        claims.put("roles",user.getRoles() .stream().map(role -> role.getRoleName()).toList());
+        return createToken(claims, user.getUsername());
+    }
+    
     private String createToken(Map<String, Object> claims, String subject) {
         return Jwts.builder()
                 .setClaims(claims)
