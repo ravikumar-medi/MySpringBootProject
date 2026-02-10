@@ -1,17 +1,17 @@
 package com.myproject.cbts.service.impl;
 
 import com.myproject.cbts.dto.CbtsCreateUserRequest;
-
 import com.myproject.cbts.dto.CbtsCreateUserResponse;
+import com.myproject.cbts.models.CbtsRole;
 import com.myproject.cbts.models.CbtsUser;
+import com.myproject.cbts.repository.CbtsRoleRepo;
+import com.myproject.cbts.repository.CbtsUserRepo;
 import com.myproject.cbts.service.CbtsUserService;
 import com.myproject.model.Users;
 import com.myproject.repository.UserRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import lombok.RequiredArgsConstructor;
-
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -19,8 +19,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CbtsUserServiceImpl implements CbtsUserService {
 
-    private final UserRepo userRepo;
-    private final RoleRepo roleRepo;
+    private final CbtsUserRepo userRepo;
+    private final CbtsRoleRepo roleRepo;
     private final PasswordEncoder passwordEncoder;
 
     @Override
@@ -30,7 +30,7 @@ public class CbtsUserServiceImpl implements CbtsUserService {
             throw new RuntimeException("Username already exists");
         }
 
-        Set<Roles> roleEntities = request.getRoles().stream()
+        Set<CbtsRole> roleEntities = request.getRoles().stream()
                 .map(role ->
                         roleRepo.findByRoleName(role)
                                 .orElseThrow(() ->
@@ -47,7 +47,7 @@ public class CbtsUserServiceImpl implements CbtsUserService {
         user.setStatus("ACTIVE");
         user.setRoles(roleEntities);
 
-        Users savedUser = userRepo.save(user);
+        CbtsUser savedUser = userRepo.save(user);
 
         return CbtsCreateUserResponse.builder()
                 .id(savedUser.getId())

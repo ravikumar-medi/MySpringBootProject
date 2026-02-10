@@ -6,7 +6,6 @@ import com.myproject.cbts.dto.CbtsLoginRequest;
 import com.myproject.cbts.dto.CbtsLoginResponse;
 import com.myproject.cbts.service.CbtsAuthService;
 import com.myproject.cbts.service.CbtsUserService;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
