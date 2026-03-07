@@ -14,11 +14,11 @@
     </parent>
 
     <groupId>org.example</groupId>
-    <artifactId>MySpringBootProject</artifactId>
+    <artifactId>CBTSDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>MySpringBootProject</name>
+    <name>CBTSDemo</name>
     <description>Spring Boot Application for learning purpose</description>
 
     <properties>
@@ -108,7 +108,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <scope>provided</scope>
         </dependency>
 
         <!-- Test -->
@@ -136,6 +135,27 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- JaCoCo plugin to generate coverage reports -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.10</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
         </plugins>
